@@ -15,6 +15,7 @@
 		15CF210025FE92E7005BEA60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15CF20FE25FE92E7005BEA60 /* LaunchScreen.storyboard */; };
 		15CF210925FEF3A8005BEA60 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF210825FEF3A8005BEA60 /* UIView+Extensions.swift */; };
 		15CF210B25FEF431005BEA60 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF210A25FEF431005BEA60 /* UIColor+Extensions.swift */; };
+		15CF210E25FF1B06005BEA60 /* SnapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15CF210D25FF1B06005BEA60 /* SnapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		15CF210125FE92E7005BEA60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15CF210825FEF3A8005BEA60 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		15CF210A25FEF431005BEA60 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		15CF210D25FF1B06005BEA60 /* SnapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +62,26 @@
 		15CF20F225FE92E6005BEA60 /* InteractiveContentView */ = {
 			isa = PBXGroup;
 			children = (
+				15CF210C25FF1A40005BEA60 /* Views */,
 				15CF20F325FE92E6005BEA60 /* AppDelegate.swift */,
+				15CF20FC25FE92E7005BEA60 /* Assets.xcassets */,
+				15CF210125FE92E7005BEA60 /* Info.plist */,
+			);
+			path = InteractiveContentView;
+			sourceTree = "<group>";
+		};
+		15CF210C25FF1A40005BEA60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				15CF20F525FE92E6005BEA60 /* SceneDelegate.swift */,
 				15CF20F725FE92E6005BEA60 /* PlaygroundViewController.swift */,
 				15CF20F925FE92E6005BEA60 /* Main.storyboard */,
-				15CF20FC25FE92E7005BEA60 /* Assets.xcassets */,
 				15CF20FE25FE92E7005BEA60 /* LaunchScreen.storyboard */,
-				15CF210125FE92E7005BEA60 /* Info.plist */,
 				15CF210825FEF3A8005BEA60 /* UIView+Extensions.swift */,
 				15CF210A25FEF431005BEA60 /* UIColor+Extensions.swift */,
+				15CF210D25FF1B06005BEA60 /* SnapView.swift */,
 			);
-			path = InteractiveContentView;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +157,7 @@
 			files = (
 				15CF20F825FE92E6005BEA60 /* PlaygroundViewController.swift in Sources */,
 				15CF210B25FEF431005BEA60 /* UIColor+Extensions.swift in Sources */,
+				15CF210E25FF1B06005BEA60 /* SnapView.swift in Sources */,
 				15CF20F425FE92E6005BEA60 /* AppDelegate.swift in Sources */,
 				15CF210925FEF3A8005BEA60 /* UIView+Extensions.swift in Sources */,
 				15CF20F625FE92E6005BEA60 /* SceneDelegate.swift in Sources */,
