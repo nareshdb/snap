@@ -10,8 +10,8 @@ import UIKit
 
 class PlaygroundViewController: UIViewController {
 
-    ///The stubborn views which doesn't like moving away from its place and moves backs to the original position when dragged
-    var stubbornViews: [SnapView] = []
+    ///The snap views which doesn't like moving away from its place and moves backs to the original position when dragged
+    var snaps: [SnapView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,18 @@ class PlaygroundViewController: UIViewController {
     func addSnaps() {
         
         DispatchQueue.main.async {
-            let snapSize = self.view.frame.size.applying(CGAffineTransform.init(scaleX: 0.2, y: 0.2))
             
-            let snap1Origin = self.view.center.applying(CGAffineTransform.init(scaleX: 0.5, y: 1))
-            let snap1 = SnapView(frame: CGRect.init(origin: snap1Origin, size: snapSize), referenceView: self.view)
+            let numberOfSnaps = Int.random(in: 1...5)
             
-            let snap2Origin = self.view.center.applying(CGAffineTransform.init(scaleX: 1, y: 0.5))
-            let snap2 =  SnapView(frame: CGRect.init(origin: snap2Origin, size: snapSize),
-                                  referenceView: self.view)
+            self.snaps = (1...numberOfSnaps).map { (index) -> SnapView in
+                
+                let snapSize = self.view.frame.size.applying(CGAffineTransform
+                    .init(scaleX: CGFloat.random(in: 0.15...0.25), y: CGFloat.random(in: 0.15...0.25)))
+                let snapOrigin = self.view.center.applying(CGAffineTransform.init(scaleX: CGFloat.random(in: 0.5...1.5), y: CGFloat.random(in: 0.5...1.5)))
+                return SnapView(frame: CGRect.init(origin: snapOrigin, size: snapSize), referenceView: self.view)
+            }
             
-            self.stubbornViews = [snap1, snap2]
-            for _view in self.stubbornViews {
+            for _view in self.snaps {
                 self.view.addSubview(_view)
             }
         }
